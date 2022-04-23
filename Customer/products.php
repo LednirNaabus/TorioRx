@@ -20,7 +20,7 @@
 
     <ul class="cards" id="myUL">
             <li>
-                <a href="" class="card">
+                <a href="viewproduct.php" class="card">
                 <img src="../Customer/img/test.png" class="card__image" alt="" />
                 <div class="card__overlay">
                     <div class="card__header">
