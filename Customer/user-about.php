@@ -7,14 +7,14 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-		
+	
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
 	<style>
 		body 
 			{
 				overflow-x:hidden;
-				font-family: Times New Roman, Times, serif;
+				font-family: 'Poppins';
 			}
 			
 		 .background {
@@ -42,7 +42,7 @@
         <?php include('includes/main/navbar.php'); ?>
 		
 		<center>
-		<img src="header1.jpg" width="1600" height="709">
+		<img src="header1.jpg" width="1600" height="675">
 			<div class="container" style="margin-top:-10.6vh; font-family: 'Cutive Mono'; font-size: 35px; ">
 			  <div class="row">
 				<div class="col" style="background-color:rgba(25, 144, 206, 0.92); color: white; padding-top:2vh; padding-bottom:2vh;">
@@ -180,5 +180,8 @@
 				</div>
 			</div>
 		</center>
+		<!-- footer -->
+		<?php include('includes/main/footer.php'); ?>
+		
     </body>
 </html>
