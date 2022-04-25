@@ -40,19 +40,19 @@
                         <br>
                         <h5 style="padding-left: 20px"> Medicine 1 </h5>
                         <p style="font-size: 14px; font-weight: 200; padding-left: 20px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button>
+                        <a href="user-about.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button></a>
                     </div>
                     <div class="col-md-3 feature-link-2">
                         <br>
                         <h5 style="padding-left: 20px"> Medicine 2 </h5>
                         <p style="font-size: 14px; font-weight: 200; padding-left: 20px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button>
+                        <a href="user-about.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button></a>
                     </div>
                     <div class="col-md-3 feature-link-3">
                         <br>
                         <h5 style="padding-left: 20px"> Medicine 3 </h5>
                         <p style="font-size: 14px; font-weight: 200; padding-left: 20px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button>
+                        <a href="user-about.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button></a>
                     </div>
                 </div>
                 </div>
@@ -64,7 +64,7 @@
                     <h2> > See all of our products now! </h3>
                 </div>
                 <div class="btn-desc">
-                    <button type="button" class="btn btn-outline-light">View all Products</button>
+                <a href="products.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">View All Products</button></a>
                 </div>
             </div>
 
@@ -78,21 +78,21 @@
                         <br><br>
                         <h5> Connect with us </h5>
                         <p style="font-weight: 200; line-height: 30px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="" style="text-decoration: none; color: #09427D;"> > Read More </a>
+                        <a href="user-about.php" style="text-decoration: none; color: #09427D;"> > Read More </a>
                     </div>
                     <div class="col-md-4">
                         <i class="fas fa-prescription" style= "color: #09427D; font-size: 65px;"></i>
                         <br><br>
                         <h5> Check our products </h5>
                         <p style="font-weight: 200; line-height: 30px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="" style="text-decoration: none; color: #09427D;"> > Read More </a>
+                        <a href="user-about.php" style="text-decoration: none; color: #09427D;"> > Read More </a>
                     </div>
                     <div class="col-md-4">
                         <i class="fas fa-user-nurse" style= "color: #09427D; font-size: 65px;"></i>
                         <br><br>
                         <h5> Know the team </h5>
                         <p style="font-weight: 200; line-height: 30px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="" style="text-decoration: none; color: #09427D;"> > Read More </a>
+                        <a href="user-about.php" style="text-decoration: none; color: #09427D;"> > Read More </a>
                     </div>
                 </div>
                 </div>

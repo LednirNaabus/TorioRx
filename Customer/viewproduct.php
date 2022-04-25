@@ -2,13 +2,16 @@
     <head>
         <title>TorioRx Pharmacy | Products</title>
 
+        <?php include('includes/main/header.php'); ?>
         <?php include("../Customer/includes/main/products_header.php"); ?>
-
         <?php include("../Customer/includes/main/viewproduct_style.php"); ?>
 
     </head>
 
     <body style="font-family: Poppins;">
+
+    <!-- navbar -->
+    <?php include('includes/main/navbar.php'); ?>
 
     <div class="container">
 		<div class="card">
@@ -82,5 +85,7 @@
     </div>
     </center>
 
+    <!-- footer -->
+    <?php include('includes/main/footer.php'); ?>
     </body>
 </html>

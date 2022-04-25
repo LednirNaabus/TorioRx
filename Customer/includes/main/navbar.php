@@ -9,10 +9,10 @@
         <i class="fas fa-bars"></i>
     </label>
     <ul class="nav-links">
-        <li class="nav-links-li"><a href="#" style="font-weight: 100">Home</a></li>
-        <li class="nav-links-li"><a href="#" style="font-weight: 100">About</a></li>
-        <li class="nav-links-li"><a href="#" style="font-weight: 100">Products</a></li>
-        <li class="nav-links-li"><a href="#" style="font-weight: 100">Contact</a></li>
-        <li class="nav-links-li"><a href="#" style="font-weight: 100">Login</a></li>
+        <li class="nav-links-li"><a href="user-dashboard.php" style="font-weight: 100">Home</a></li>
+        <li class="nav-links-li"><a href="user-about.php" style="font-weight: 100">About</a></li>
+        <li class="nav-links-li"><a href="products.php" style="font-weight: 100">Products</a></li>
+        <li class="nav-links-li"><a href="user-contact.php" style="font-weight: 100">Contact</a></li>
+        <li class="nav-links-li"><a href="registerlogin.php" style="font-weight: 100">Logout</a></li>
     </ul>
 </nav>

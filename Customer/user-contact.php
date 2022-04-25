@@ -14,7 +14,6 @@
 			{
 				overflow-x:hidden;
 				font-family: Times New Roman, Times, serif;
-				padding-bottom:10vh;
 			}
 			
 		.background {
@@ -117,7 +116,8 @@
 				
 					  </div>
 				</div>
-			
-		
+			<br><br><br>
+		<!-- footer -->
+		<?php include('includes/main/footer.php'); ?>
     </body>
 </html>
