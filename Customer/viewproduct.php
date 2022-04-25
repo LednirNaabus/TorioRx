@@ -3,7 +3,6 @@
         <title>TorioRx Pharmacy | Products</title>
 
         <?php include('includes/main/header.php'); ?>
-        <?php include("../Customer/includes/main/products_header.php"); ?>
         <?php include("../Customer/includes/main/viewproduct_style.php"); ?>
 
     </head>
