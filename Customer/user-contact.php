@@ -13,8 +13,7 @@
 		body 
 			{
 				overflow-x:hidden;
-				font-family: Times New Roman, Times, serif;
-				padding-bottom:10vh;
+				font-family: 'Poppins';
 			}
 			
 		.background {
@@ -53,7 +52,7 @@
 				<p style="font-family: 'Poppins';  color: white; margin-top: 8vh; font-size: 20px;">Whether you have a question, complaints, or anything else, our team is ready to respond.</p>
 		</div>
 		</center>
-		<div class="container" style="margin-top:10vh; ">
+		<div class="container" style="margin-top:10vh; margin-bottom:10vh; ">
 					  <div class="row">
 						<div class="col" >
 								<br><br><br>
@@ -117,7 +116,9 @@
 				
 					  </div>
 				</div>
-			
 		
+			<!-- footer -->
+			<?php include('includes/main/footer.php'); ?>
     </body>
+				
 </html>
