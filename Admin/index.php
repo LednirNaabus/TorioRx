@@ -10,4 +10,5 @@
     include "includes/connection/db.php";
 
     echo '<h1> WELCOME, ' . htmlspecialchars($_SESSION['username']) . '</h1>';
+    echo '<a href="logout.php">LOGOUT</a>';
  ?>
