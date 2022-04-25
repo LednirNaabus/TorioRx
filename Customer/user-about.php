@@ -180,5 +180,8 @@
 				</div>
 			</div>
 		</center>
+
+		<!-- footer -->
+		<?php include('includes/main/footer.php'); ?>
     </body>
 </html>
