@@ -63,17 +63,6 @@
 
     <center>
     <div class="c">
-    <input type="checkbox" id="faq-1">
-    <h1><label for="faq-1">What is this medicine used for?</label></h1>
-    <div class="p">
-        <p>
-            For the relief of minor aches and pains such as headache, backache, menstrual cramps, muscular aches, minor arthritis pain, toothache, and pain associated with the common cold and flu.
-        </p>
-    </div>
-    </div>
-    </center>
-    <center>
-    <div class="c">
     <input type="checkbox" id="faq-2">
     <h1><label for="faq-2">What is in this medicine?</label></h1>
     <div class="p">
