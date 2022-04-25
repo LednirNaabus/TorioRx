@@ -24,7 +24,7 @@
 			</div>
 
 			<div class="login">
-				<form>
+				<form action="login.php" method="POST">
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
