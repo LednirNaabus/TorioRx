@@ -50,11 +50,8 @@
                             If you are pregnant or breastfeeding, consult your doctor before use.
                             If symptoms persist, consult your doctor.
                         </p>
-						<h4 class="price">Price: Product Price</h4>
-                        <br>
-						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">Add to Cart</button>
-						</div>
+                        <br><br>
+						<h5 class="price">Price: Product Price</h5>
 					</div>
 				</div>
 			</div>
