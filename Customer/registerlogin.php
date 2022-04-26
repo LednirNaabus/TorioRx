@@ -14,21 +14,21 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form action="customerRegister.php" method="POST">
 					<label for="chk" aria-hidden="true">Register</label>
-					<input type="text" name="txt" placeholder="Username" required="">
+					<input type="text" name="username" placeholder="Username" required="">
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
+					<button type="submit">Sign up</button>
 				</form>
 			</div>
 
 			<div class="login">
-				<form>
+				<form action="customerLogin.php" method="POST">
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign in</button>
+					<button type="submit">Sign in</button>
 				</form>
 			</div>
 	</div>
