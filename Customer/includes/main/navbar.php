@@ -13,6 +13,6 @@
         <li class="nav-links-li"><a href="user-about.php" style="font-weight: 100">About</a></li>
         <li class="nav-links-li"><a href="products.php" style="font-weight: 100">Products</a></li>
         <li class="nav-links-li"><a href="user-contact.php" style="font-weight: 100">Contact</a></li>
-        <li class="nav-links-li"><a href="registerlogin.php" style="font-weight: 100">Logout</a></li>
+        <li class="nav-links-li"><a href="logout.php" style="font-weight: 100">Logout</a></li>
     </ul>
 </nav>
