@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    include 'includes/connection/db.php';
+?>
+
 <html>
     <head>
         <title>TorioRx Pharmacy | Products</title>
@@ -33,35 +39,42 @@
             <h4 class="modal-title">Create Product Entry</h4>
             </div>
             <div class="modal-body">
-            <form>
+            <form action="product_add.php" method="post">
             <div class="form-group">
-                <label for="exampleFormControlInput1">Name of Product</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Biogesic">
+                <label for="product_name">Name of Product</label>
+                <input type="text" class="form-control" name="product_name" id="exampleFormControlInput1" placeholder="Biogesic">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlFile1">Product Image</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <label for="product_img">Product Image</label>
+                <input type="file" class="form-control-file" name="product_img" id="product_img">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Brief Info</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Relief and care for headache and fever">
+                <label for="product_price">Product Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">PhP</span>
+                    <input type="text" name="product_price" id="" class="form-control">
+                </div>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Main Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="prod_bInfo">Brief Info</label>
+                <input type="text" class="form-control" name="prod_bInfo" id="exampleFormControlInput1" placeholder="Relief and care for headache and fever">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Product Content</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <label for="product_desc">Main Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="product_desc" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Intake Interval</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <label for="prod_contain">Product Content</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="prod_contain" rows="2"></textarea>
             </div>
-            </form>
+            <div class="form-group">
+                <label for="prod_prescription">Intake Interval</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="prod_prescription" rows="2"></textarea>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-default">Add to List</button>
+            <button type="submit" name="submit" class="btn btn-default">Add to List</button>
+            </div>
+            </form>
             </div>
         </div>
         </div>
