@@ -37,7 +37,7 @@ a{
 nav{
     height: 80px;
     background-color: #09427D;
-    display: flex;
+    display: flex !important;
     align-items: center;
     /* justify-content: center; */
     justify-content: space-between;
@@ -53,7 +53,7 @@ nav .logo{
 }
 
 nav ul{
-    display: flex;
+    display: flex !important;
     list-style: none;
 }
 

@@ -28,7 +28,7 @@
             $_SESSION['username'] = $table_username;
             $_SESSION['user_email'] = $email;
             $_SESSION['user_id'] = $user_id;
-            header("location: index.php");
+            header("location: admin-dashboard.php");
         } else {
             Print '<script>alert("Incorrect email or password!");</script>';
             Print '<script>window.location.assign("registerlogin.php");</script>';
