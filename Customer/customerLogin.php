@@ -28,7 +28,7 @@
             header("location: user-dashboard.php");
         } else {
             Print '<script>alert("Incorrect email or password!");</script>';
-            Print '<script>window.location.assign("customerlogin.php");</script>';
+            Print '<script>window.location.assign("registerLogin.php");</script>';
         }
     }
 ?>

@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    if ($_SESSION['loggedin']) { 
+    } else { 
+        header("location:registerlogin.php");
+    } 
+    include 'includes/connection/db.php';
+?>
 <html>
     <head>
         <title>Admin Dashboard</title>

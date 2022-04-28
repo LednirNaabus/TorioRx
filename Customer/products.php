@@ -33,12 +33,13 @@ if ($_SESSION['loggedin']) {
         <?php 
             include "includes/connection/db.php";
             $sql = "SELECT * FROM products";
-            $query = mysqli_query($link, $sql); 
-            while ($row = mysqli_fetch_array($query)) {  
+            $query = mysqli_query($link, $sql);              
+            $_SESSION['product_image_array']=array();
+            while ($row = mysqli_fetch_array($query)) {   
 
                 print "<li>";
-                    print '<a href="viewproduct.php" class="card">';
-                        print '<img src="data:image/png;base64,' . base64_encode($row['product_image']). '" class="card__image" alt="" />';
+                    print '<a  href="viewproduct.php?product_id=' . $row['product_id'] . '" class="card">';
+                        print '<img src="data:image/png;base64,' . base64_encode($row['product_image'] ). '" class="card__image" alt="" />';
                         print '<div class="card__overlay">';
                             print '<div class="card__header">';
                                 print '<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>';
@@ -47,7 +48,7 @@ if ($_SESSION['loggedin']) {
                                     print '<span class="card__status">' . $row['product_briefinfo'] . '</span>';
                                 print "</div>";
                             print "</div>";
-                            print '<button type="button" style="margin-left: 2em; margin-bottom: 2em;">More Details</button>';
+                            print '<button style="margin-left: 2em; margin-bottom: 2em;">More Details</button>';
                         print '</div>';
                     print "</a>";
                 print "</li>";
