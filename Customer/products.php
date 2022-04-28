@@ -33,8 +33,7 @@ if ($_SESSION['loggedin']) {
         <?php 
             include "includes/connection/db.php";
             $sql = "SELECT * FROM products";
-            $query = mysqli_query($link, $sql);              
-            $_SESSION['product_image_array']=array();
+            $query = mysqli_query($link, $sql);          
             while ($row = mysqli_fetch_array($query)) {   
 
                 print "<li>";
