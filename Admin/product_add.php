@@ -7,14 +7,6 @@
 
     if(isset($_POST['submit'])) {
         $prod_name = $_POST['product_name'];
-        /*
-            IDK how to make this work
-            -- Error Messages --
-            Warning: Undefined array key "product_img"
-            Warning: Trying to access array offset on value of type null
-            Fatal error: Uncaught ValueError: Path cannot be empty
-        */
-        // $prod_img = mysqli_real_escape_string($link, file_get_contents($_FILES['product_img']['tmp_name']));
         $prod_img = addslashes(file_get_contents($_FILES['product_img']['tmp_name']));
         $prod_price = $_POST['product_price'];
         $prod_brief_info = $_POST['prod_bInfo'];
