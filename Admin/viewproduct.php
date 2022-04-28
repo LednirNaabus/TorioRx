@@ -7,8 +7,7 @@
     <?php include('includes/main/products_header.php'); ?>
     <?php include("../Admin/includes/main/viewproduct_style.php"); ?>
 
-</head> 
-
+</head>  
 <body style="font-family: Poppins;">
 
     <!-- navbar -->
