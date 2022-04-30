@@ -6,6 +6,7 @@
     <head>
         <title>TorioRx Pharmacy | Products</title>
 
+</head>  
         <?php include('includes/main/header.php'); ?>
         <?php include('includes/main/products_header.php'); ?>
         <?php include("../Admin/includes/main/viewproduct_style.php"); ?>

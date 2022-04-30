@@ -9,6 +9,7 @@
         <i class="fas fa-bars"></i>
     </label>
     <ul class="nav-links">
+        <li class="nav-links-li"><a href="announcements.php" class="announcement"><span class="iconify" data-icon="ion:megaphone"></span></a></li>
         <li class="nav-links-li"><a href="admin-dashboard.php" style="font-weight: 100">Home</a></li>
         <li class="nav-links-li"><a href="admin-about.php" style="font-weight: 100">About</a></li>
         <li class="nav-links-li"><a href="products.php" style="font-weight: 100">Products</a></li>
