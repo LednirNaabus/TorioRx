@@ -43,7 +43,7 @@ include 'includes/connection/db.php';
                     <h4 class="modal-title">Create Product Entry</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="product_add.php" method="post">
+                    <form action="product_add.php" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="product_name">Name of Product</label>
                             <input type="text" class="form-control" name="product_name" id="exampleFormControlInput1" placeholder="Biogesic">

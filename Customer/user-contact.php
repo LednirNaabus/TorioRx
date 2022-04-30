@@ -3,6 +3,10 @@
     <head>
         <title>User Dashboard</title>
         <?php include('includes/main/header.php'); ?>
+
+		<?php
+			session_start();
+		?>
 		
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 		
@@ -85,25 +89,25 @@
 					
 						<div class="col" style="color: grey; font-family: 'Raleway'; padding-left:5vh; border: ">
 							<center>
-								<form style="box-shadow: 0 0 15px; padding: 50px; border-radius: 5px;">
+								<form style="box-shadow: 0 0 15px; padding: 50px; border-radius: 5px;" action="post_feedback.php" method="post">
 								  <b><p style="color: #09407c; font-size: 45px; font-family: 'Poppins';">Get in touch with us!</p></b>
 								
 								<br>
 
 									<div class="form-floating" style="font-family: 'Poppins'; font-size: 15px;width:25vw;">
-									  <input type="name" class="form-control" id="floatingInput" placeholder="Name:" >
+									  <input type="name" class="form-control" id="floatingInput" name="customer_name" placeholder="Name:" >
 									  <label for="floatingInput">Name: </label>
 									</div>
 								<br>
 								
 									<div class="form-floating" style="font-family: 'Poppins'; font-size: 15px;width:25vw;">
-									  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+									  <input type="email" class="form-control" id="floatingInput" name="customer_email" placeholder="name@example.com">
 									  <label for="floatingInput">Email Address:</label>
 									</div>
 								
 								<br>								
 									<div class="form-floating" style="font-family: 'Poppins'; font-size: 15px;width:25vw;">
-									  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+									  <textarea class="form-control" placeholder="Leave a comment here" name="feedback_details" id="floatingTextarea2" style="height: 100px"></textarea>
 									  <label for="floatingTextarea2">Message: </label>
 									</div>
 								<br>

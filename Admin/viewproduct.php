@@ -91,7 +91,6 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Edit Product Entry</h4>
                 </div>
                 <form action="product_edit.php" method="post">
@@ -107,7 +106,7 @@
                         </div>
                         <div class="form-group">
                             <label for="prod_price">Product Price</label>
-                            <div class="input-group">
+                            <div class="input-group" style="margin-left:30px; width:90%;">
                                 <span class="input-group-addon">PhP</span>
                                 <input type="text" name="prod_price" id="" class="form-control">
                             </div>
@@ -130,6 +129,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-default">Save</button>
                     </div>
                 </form>
