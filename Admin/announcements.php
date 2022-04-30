@@ -2,8 +2,8 @@
 
 <head>
     <title>TorioRx Pharmacy | Announcements</title>
-    
-    <?php include('includes/main/header.php'); ?> 
+
+    <?php include('includes/main/header.php'); ?>
     <link rel="stylesheet" href="dist/css/announcement_style.css">
 </head>
 <?php
@@ -63,32 +63,87 @@ if ($_SESSION['loggedin']) {
                     ?>
                     <td><a class="edit-modal"><span class="iconify edit" data-icon="akar-icons:edit"></span></a></td>
                     <td><a class="delete-modal"><span class="iconify delete" data-icon="fluent:delete-dismiss-24-regular"></span></a></td>
+
+
                 </tr>
 
             </table>
 
         </div>
-        <div class="modal-edit show-modal" id="modal">
+        <div class="modal-edit" id="modal">
             <div class="modal-content-edit">
                 <div class="heading-container">
                     <div class="heading">Edit Announcement</div>
                     <span class="close-button"><span class="iconify close-button" data-icon="eva:close-square-outline"></span></span>
                     <div class="line"></div>
                 </div>
-                <form action="" class="edit-form">
-                    <label for="title-label" class="title-label v1">Announcement Details:</label>
-                    <input type="text" id="course-title" name="title-label"> 
+                <form action="edit_announcement.php" method="POST" class="edit-form">
+                    <label for="title-label" class="title-label edit-title">Announcement Details:</label>
+                    <textarea type="text" oninput="auto_grow(this)" id="textarea-edit" name="announcement_details" class="announcement-details"><?php print $announcement_details; ?></textarea>
 
-                    <input type="submit" name="add" class="submit" value="Add Course">
+                    <label for="type" class="type-label edit-title">Choose Type:</label>
+                    <select id="type" name="type" class="select-type">
+
+                        <?php
+                        if ($announcement_level == 1) {
+                            print '
+                                <option value="4">Normal</option>
+                                <option value="2">New Stock</option>
+                                <option value="1" selected>Restock</option>
+                                <option value="3">Urgent</option>                            
+                            ';
+                        } else if ($announcement_level == 2) {
+                            print '
+                                <option value="4">Normal</option>
+                                <option value="2" selected>New Stock</option>
+                                <option value="1">Restock</option>
+                                <option value="3">Urgent</option>                            
+                            ';
+                        } else if ($announcement_level == 3) {
+                            print '
+                                <option value="4">Normal</option>
+                                <option value="2">New Stock</option>
+                                <option value="1">Restock</option>
+                                <option value="3" selected>Urgent</option>                            
+                            ';
+                        } else if ($announcement_level == 4) {
+                            print '
+                                <option value="4" selected>Normal</option>
+                                <option value="2">New Stock</option>
+                                <option value="1">Restock</option>
+                                <option value="3">Urgent</option>                            
+                            ';
+                        }
+                        ?>
+
+
+                    </select>
+
+                    <input type="submit" name="edit" class="submit-edit" value="Save">
                 </form>
             </div>
         </div><!-- END EDIT MODAL -->
+
+        <div class="modal-delete" id="modal">
+            <div class="modal-content-delete">
+                <div class="heading-container">
+                    <div class="heading">Delete Announcement</div>
+                    <span class="close-button-delete"><span class="iconify close-button-delete" data-icon="eva:close-square-outline"></span></span>
+                    <div class="line"></div>
+                </div>
+                <form action="delete_announcement.php" method="GET" class="edit-form">
+                    <label for="title-label" class="title-label-delete">Delete this announcement?</label>
+                    <input type="submit" name="delete" class="submit-delete" value="Delete">
+                </form>
+            </div>
+        </div><!-- END DELETE MODAL -->
+
     <?php } else { ?>
 
         <div class="container">
             <table class="table">
                 <tr>
-                    <th>Announcements</th>
+                    <th>Announcements <span class="add-button-container"> <a class="add-modal"> <span class="iconify iconAdd" data-icon="ant-design:plus-outlined"></span> Add</a> </span></th>
                     <th>Type</th>
                     <th>Modify</th>
                 </tr>
@@ -115,14 +170,45 @@ if ($_SESSION['loggedin']) {
             <?php
                 }
             } ?>
+            <!-- ADD MODAL -->
+            <div class="modal-add" id="modal">
+                <div class="modal-content-edit">
+                    <div class="heading-container">
+                        <div class="heading">Add Announcement</div>
+                        <span class="close-button-add"><span class="iconify close-button-add" data-icon="eva:close-square-outline"></span></span>
+                        <div class="line"></div>
+                    </div>
+                    <form action="add_announcement.php" method="POST" class="edit-form">
+                        <label for="title-label" class="title-label v1">Announcement Details:</label>
+                        <textarea type="text" oninput="auto_grow(this)" id="textarea" name="announcement_details" class="announcement-details"></textarea>
+
+                        <label for="type" class="type-label">Choose Type:</label>
+                        <select id="type" name="type" class="select-type">
+                            <option value="4" selected>Normal</option>
+                            <option value="2">New Stock</option>
+                            <option value="1">Restock</option>
+                            <option value="3">Urgent</option>
+                        </select>
+
+                        <input type="submit" name="add" class="submit" value="Add">
+                    </form>
+                </div>
+            </div><!-- END ADD MODAL -->
+
+
+
             </table>
+
+
+
+
         </div>
         <?php include("../Customer/includes/main/products_search.php"); ?>
 
         <!-- footer -->
         <?php include('includes/main/footer.php'); ?>
         <script>
-            //Add Modal
+            //Edit Modal 
             const modal = document.querySelector(".modal-edit");
             const trigger = document.querySelector(".edit-modal");
             const closeButton = document.querySelector(".close-button");
@@ -138,6 +224,52 @@ if ($_SESSION['loggedin']) {
 
             trigger.addEventListener("click", toggleModal);
             closeButton.addEventListener("click", closeModal);
+
+
+
+
+
+            //Delete Modal
+            const modalDelete = document.querySelector(".modal-delete");
+            const triggerDelete = document.querySelector(".delete-modal");
+            const closeButtonDelete = document.querySelector(".close-button-delete");
+
+            function toggleModalDelete() {
+                modalDelete.classList.toggle("show-modal-delete");
+
+            }
+
+            function closeModalDelete() {
+                modalDelete.classList.toggle("show-modal-delete");
+            }
+
+            triggerDelete.addEventListener("click", toggleModalDelete);
+            closeButtonDelete.addEventListener("click", closeModalDelete);
+
+
+
+            function auto_grow(element) {
+                element.style.height = "5px";
+                element.style.height = (element.scrollHeight) + "px";
+            }
+        </script>
+        <script>
+            //ADD Modal 
+            const modaladd = document.querySelector(".modal-add");
+            const triggeradd = document.querySelector(".add-modal");
+            const closeButtonadd = document.querySelector(".close-button-add");
+
+            function toggleModaladd() {
+                modaladd.classList.toggle("show-modal");
+
+            }
+
+            function closeModaladd() {
+                modaladd.classList.toggle("show-modal");
+            }
+
+            triggeradd.addEventListener("click", toggleModaladd);
+            closeButtonadd.addEventListener("click", closeModaladd);
         </script>
 </body>
 

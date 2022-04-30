@@ -12,24 +12,26 @@
 		</div>
 		<div class="announcement-content">
 			<table class="announcement-table">
-				<tr>
-					<td><span class="iconify ac" data-icon="ic:baseline-announcement" style="color:red"></span></td>
-					<td>The store is closed today. Please come again tomorrow!</td>
-				</tr>
-				<tr>
-					<td><span class="iconify ac" data-icon="ic:baseline-announcement" style="color:#48ac19"></span></td>
-					<td>
-					Biogesic (Paracetamol) Restocked!
-					</td>
-				</tr>
-				<tr>
-					<td><span class="iconify ac" data-icon="ic:baseline-announcement" style="color:#0a58ca"></span></td>
-					<td>New Stock: Solmux</td>
-				</tr>
-				<tr>
-					<td><span class="iconify ac" data-icon="ic:baseline-announcement"  ></span></td>
-					<td>New Stock: Solmux</td>
-				</tr>
+				<?php
+				$sql = "SELECT * FROM announcements";
+				$query = mysqli_query($link, $sql);
+				while ($row = mysqli_fetch_array($query)) { ?>
+					<tr>
+
+						<?php
+						if ($row['announcement_level'] == 1) {
+							print '<td><span class="iconify ac" data-icon="ic:baseline-announcement" style="color:#6fb553"></span></td>';
+						} else if ($row['announcement_level']  == 2) {
+							print '<td><span class="iconify ac" data-icon="ic:baseline-announcement" style="color:#28b6e6"></span></td>';
+						} else if ($row['announcement_level']  == 3) {
+							print '<td><span class="iconify ac" data-icon="ic:baseline-announcement" style="color:#d70a0a"></span></td>';
+						} else if ($row['announcement_level']  == 4) {
+							print '<td><span class="iconify ac" data-icon="ic:baseline-announcement"></span></td>';
+						} ?>
+						<td><?php print $row['announcement_details']; ?></td>
+					</tr>
+				<?php } ?>
+
 			</table>
 		</div>
 	</div>
