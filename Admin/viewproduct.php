@@ -98,7 +98,7 @@
                         <input name="product_edit" value="<?php echo $product_id; ?>" style="width:0px; height:0px;" hidden>
                         <div class="form-group">
                             <label for="prod_name">Name of Product</label>
-                            <input style="margin-left:30px; width:90%;" name="prod_name" type="text" class="form-control" id="" placeholder="Biogesic">
+                            <input style="margin-left:30px; width:90%;" name="prod_name" type="text" class="form-control" id="" placeholder="Biogesic" value="<?php echo $product_name; ?>">
                         </div>
                         <div class="form-group">
                             <label for="prod_img">Product Image</label>
@@ -108,24 +108,36 @@
                             <label for="prod_price">Product Price</label>
                             <div class="input-group" style="margin-left:30px; width:90%;">
                                 <span class="input-group-addon">PhP</span>
-                                <input type="text" name="prod_price" id="" class="form-control">
+                                <input type="text" name="prod_price" id="" class="form-control" value="<?php echo $product_price; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="prod_brief_info">Brief Info</label>
-                            <input style="margin-left:30px; width:90%;" name="prod_brief_info" type="text" class="form-control" id="" placeholder="Relief and care for headache and fever">
+                            <input style="margin-left:30px; width:90%;" name="prod_brief_info" type="text" class="form-control" id="" value="<?php echo $product_briefinfo; ?>">
                         </div>
                         <div class="form-group">
                             <label for="prod_desc">Main Description</label>
-                            <textarea style="margin-left:30px; width:90%;" name="prod_desc" class="form-control" id="" rows="3"></textarea>
+                            <textarea style="margin-left:30px; width:90%;" name="prod_desc" class="form-control" id="" rows="3">
+                                <?php
+                                    echo $product_description;
+                                ?>
+                            </textarea>
                         </div>
                         <div class="form-group">
                             <label for="prod_contains">Product Content</label>
-                            <textarea style="margin-left:30px; width:90%;" name="prod_contains" class="form-control" id="" rows="2"></textarea>
+                            <textarea style="margin-left:30px; width:90%;" name="prod_contains" class="form-control" id="" rows="2">
+                                <?php
+                                    echo $productContains;
+                                ?>
+                            </textarea>
                         </div>
                         <div class="form-group">
                             <label for="prod_presc">Intake Interval</label>
-                            <textarea style="margin-left:30px; width:90%;" name="prod_presc" class="form-control" id="" rows="2"></textarea>
+                            <textarea style="margin-left:30px; width:90%;" name="prod_presc" class="form-control" id="" rows="2">
+                                <?php
+                                    echo $productPrescription;
+                                ?>
+                            </textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
