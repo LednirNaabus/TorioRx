@@ -42,52 +42,49 @@ if ($_SESSION['loggedin']) {
         </div>
 
         <!-- feature header  -->
-        <?php 
-            include "includes/connection/db.php";
-
-            $sql1 = "SELECT * FROM products Where product_id=1";
-            $sql2 = "SELECT * FROM products Where product_id=2";
-            $sql3 = "SELECT * FROM products Where product_id=3";
-
-            $query1 = mysqli_query($link, $sql1);  
-            $query2 = mysqli_query($link, $sql2);  
-            $query3 = mysqli_query($link, $sql3);  
-            
-            $row1 = mysqli_fetch_array($query1);
-            $row2 = mysqli_fetch_array($query2);
-            $row3 = mysqli_fetch_array($query3);     
-            
-            $product_name1 = $row1['product_name'];
-            $product_name2 = $row2['product_name'];
-            $product_name3 = $row3['product_name'];
- 
-
-            $product_briefinfo1 = $row1['product_briefinfo']; 
-            $product_briefinfo2 = $row2['product_briefinfo']; 
-            $product_briefinfo3 = $row3['product_briefinfo'];
- 
-        ?>
         <div class="header-features">
             <div class="container">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-3 feature-link-1"> 
-                        <br>
-                        <h5 style="padding-left: 20px"> <?php print $product_name1; ?> </h5>
-                        <p style="font-size: 14px; font-weight: 200; padding-left: 20px"> <?php print $product_briefinfo1; ?> </p>
-                        <a href="viewproduct.php?product_id=1.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button></a>
-                    </div>
-                    <div class="col-md-3 feature-link-2">
-                        <br>
-                        <h5 style="padding-left: 20px"> <?php print $product_name2; ?></h5>
-                        <p style="font-size: 14px; font-weight: 200; padding-left: 20px">  <?php print $product_briefinfo2; ?> </p>
-                        <a href="viewproduct.php?product_id=2.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button></a>
-                    </div>
-                    <div class="col-md-3 feature-link-3">
-                        <br>
-                        <h5 style="padding-left: 20px"> <?php print $product_name3; ?></h5>
-                        <p style="font-size: 14px; font-weight: 200; padding-left: 20px">  <?php print $product_briefinfo3; ?> </p>
-                        <a href="viewproduct.php?product_id=3.php"><button type="button" class="btn btn-outline-light" style="margin-left: 20px">Read More</button></a>
-                    </div>
+                    <?php 
+                        include "includes/connection/db.php";
+                        $product_query = mysqli_query($link, "SELECT * FROM products ORDER BY product_id LIMIT 3");
+
+                        if($product_query != null) {
+                            while($row = mysqli_fetch_array($product_query)) {
+                                //print 3 queries from products table
+                                if($row['product_id'] == 1) {
+                                    echo '<div class="col-md-3 feature-link-1">
+                                            <br>
+                                            <h5 style="padding-left: 20px"> ' . $row['product_name'] . '</h5>
+                                            <p style="font-size: 14px; font-weight: 200; padding-left: 20px;"> ' . $row['product_briefinfo'] . '</p>
+                                            <a href="viewproduct.php?product_id='. $row['product_id'] . '"><button type="button" class="btn btn-outline-light" style="margin-left: 20px"> Read More </button></a>
+                                         </div>';
+                                } elseif($row['product_id'] == 2) {
+                                    echo    '<div class="col-md-3 feature-link-2">
+                                                <br>
+                                                <h5 style="padding-left: 20px">' . $row['product_name'] . ' </h5>
+                                                <p style="font-size: 14px; font-weight: 200; padding-left: 20px">' . $row['product_briefinfo'] . '</p>
+                                                <a href="viewproduct.php?product_id=' . $row['product_id'] . '"><button type="button" class="btn btn-outline-light" style="margin-left: 20px"> Read More</button></a>
+                                            </div>';
+                                } elseif($row['product_id'] == 3) {
+                                    echo    '<div class="col-md-3 feature-link-3">
+                                                <br>
+                                                <h5 style="padding-left: 20px">' . $row['product_name'] . ' </h5>
+                                                <p style="font-size: 14px; font-weight: 200; padding-left: 20px">' . $row['product_briefinfo'] . '</p>
+                                                <a href="viewproduct.php?product_id=' . $row['product_id'] . '"><button type="button" class="btn btn-outline-light" style="margin-left: 20px"> Read More</button></a>
+                                            </div>';
+                                }
+                            }
+                        } else {
+                            echo '<div class="header-features">
+                                    <div class="container">
+                                        <div class="row justify-content-md-center">
+                                            Nothing here yet.
+                                        </div>
+                                    </div>
+                                </div>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
