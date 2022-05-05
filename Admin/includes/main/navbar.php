@@ -11,9 +11,9 @@
     <ul class="nav-links">
         <li class="nav-links-li"><a href="announcements.php" class="announcement"><span class="iconify" data-icon="ion:megaphone"></span></a></li>
         <li class="nav-links-li"><a href="admin-dashboard.php" style="font-weight: 100">Home</a></li>
-        <li class="nav-links-li"><a href="admin-about.php" style="font-weight: 100">About</a></li>
+        <li class="nav-links-li"><a href="admin-companyProfile.php" style="font-weight: 100">Company Profile</a></li>
         <li class="nav-links-li"><a href="products.php" style="font-weight: 100">Products</a></li>
-        <li class="nav-links-li"><a href="admin-contact.php" style="font-weight: 100">Contact</a></li>
+        <li class="nav-links-li"><a href="admin-customers.php" style="font-weight: 100">Customers</a></li>
         <li class="nav-links-li"><a href="registerlogin.php" style="font-weight: 100">Logout</a></li>
     </ul>
 </nav>
