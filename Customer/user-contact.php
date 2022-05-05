@@ -2,10 +2,19 @@
 <html>
     <head>
         <title>User Dashboard</title>
-        <?php include('includes/main/header.php'); ?>
+        <?php 
+			include('includes/main/header.php');
+			include('includes/connection/db.php');
+		?>
 
 		<?php
 			session_start();
+
+			$q = mysqli_query($link, "SELECT * FROM customers WHERE customer_id =" . $_SESSION['user_id']);
+			while($row = mysqli_fetch_array($q)) {
+				$customer_email = $row['customer_email'];
+			}
+			
 		?>
 		
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -96,12 +105,12 @@
 
 									<div class="form-floating" style="font-family: 'Poppins'; font-size: 15px;width:25vw;">
 									  <input type="name" class="form-control" id="floatingInput" name="customer_name" placeholder="Name:" >
-									  <label for="floatingInput">Name: </label>
+									  <label for="floatingInput">Name:</label>
 									</div>
 								<br>
 								
 									<div class="form-floating" style="font-family: 'Poppins'; font-size: 15px;width:25vw;">
-									  <input type="email" class="form-control" id="floatingInput" name="customer_email" placeholder="name@example.com">
+									  <input type="email" class="form-control" id="floatingInput" name="customer_email" placeholder="name@example.com" value="<?php echo $customer_email; ?>" disabled>
 									  <label for="floatingInput">Email Address:</label>
 									</div>
 								
