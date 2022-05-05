@@ -4,7 +4,7 @@
 body,html{
     margin: revert;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(35deg, rgba(34,71,142,1) 0%, rgba(76,76,208,1) 35%, rgba(77,185,233,1) 75%);
+    background-color: #09427d; 
 }  
  
 .rounded-pill{
