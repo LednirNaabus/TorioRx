@@ -51,7 +51,7 @@ include 'includes/connection/db.php';
 
                         if($product_query != null) {
                             while($row = mysqli_fetch_array($product_query)) {
-                                //print 3 queries from products table
+                                //print 3 earliest queries from products table
                                 if($row['product_id'] == 1) {
                                     echo '<div class="col-md-3 feature-link-1">
                                             <br>
@@ -79,7 +79,6 @@ include 'includes/connection/db.php';
                             echo '<div class="header-features">
                                     <div class="container">
                                         <div class="row justify-content-md-center">
-                                            Nothing here yet.
                                         </div>
                                     </div>
                                 </div>';
