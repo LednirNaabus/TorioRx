@@ -9,8 +9,12 @@
         
         if(empty(trim($_POST['username']))) {
             $username_err = "Please enter a valid username.";
+            print '<script>alert("'.$username_err.'");</script>';
+            print '<script>window.location.assign("registerLogin.php");</script>';
         } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST['username']))) {
             $username_err = "Username should contain numbers and letters.";
+            print '<script>alert("'.$username_err.'");</script>';
+            print '<script>window.location.assign("registerLogin.php");</script>';
         } else {
             $sql = "SELECT admin_id FROM admin WHERE admin_username = ?";
 
@@ -22,6 +26,8 @@
                     mysqli_stmt_store_result($stmt);
                     if(mysqli_stmt_num_rows($stmt) == 1) {
                         $username_err = "Username already taken.";
+                        print '<script>alert("'.$username_err.'");</script>';
+                        print '<script>window.location.assign("registerLogin.php");</script>';
                     } else {
                         $username = trim($_POST['username']);
                     }
@@ -34,6 +40,8 @@
 
         if(empty(trim($_POST['email']))) {
             $email_err = "Please enter your email.";
+            print '<script>alert("'.$email_err.'");</script>';
+            print '<script>window.location.assign("registerLogin.php");</script>';
         } else {
             $sql = "SELECT admin_id FROM admin WHERE admin_email = ?";
 
@@ -45,6 +53,8 @@
                     mysqli_stmt_store_result($stmt);
                     if(mysqli_stmt_num_rows($stmt) == 1) {
                         $email_err = "Email already taken.";
+                        print '<script>alert("'.$email_err.'");</script>';
+                        print '<script>window.location.assign("registerLogin.php");</script>';
                     } else {
                         $email = trim($_POST['email']);
                     }
@@ -57,8 +67,8 @@
 
         if(empty(trim($_POST['pswd']))) {
             $password_err = "Please enter your password.";
-        } elseif(strlen(trim($_POST['pswd']) < 7)) {
-            $password_err = "Password must be atleast 7 characters.";
+            print '<script>alert("'.$password_err.'");</script>';
+            print '<script>window.location.assign("registerLogin.php");</script>';
         } else {
             $password = trim($_POST['pswd']);
         }
@@ -73,6 +83,7 @@
                 $param_email = $email;
 
                 if(mysqli_stmt_execute($stmt)) {
+                    print '<script>alert("Successfully Registered!");</script>'; 
                     header("Location: registerlogin.php");
                 } else {
                     echo "ERROR.";
