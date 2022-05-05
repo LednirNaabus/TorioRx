@@ -76,7 +76,6 @@ include 'includes/connection/db.php';
                                 }
                             }
                         } else {
-                            //if there are less than 3 products in database do not display yet
                             echo '<div class="header-features">
                                     <div class="container">
                                         <div class="row justify-content-md-center">
