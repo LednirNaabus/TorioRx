@@ -24,7 +24,7 @@
             <li class="nav-links-li"><a href="admin-dashboard.php" style="font-weight: 100">Home</a></li>
             <li class="nav-links-li"><a href="admin-about.php" style="font-weight: 100">About</a></li>
             <li class="nav-links-li"><a href="products.php" style="font-weight: 100">Products</a></li>
-            <li class="nav-links-li"><a href="admin-contact.php" style="font-weight: 100">Contact</a></li>
+            <li class="nav-links-li"><a href="admin-customers.php" style="font-weight: 100">Contact</a></li>
             <li class="nav-links-li"><a href="registerlogin.php" style="font-weight: 100">Logout</a></li>
         </ul>
     </nav>
@@ -93,31 +93,31 @@
                 <div class="modal-header">
                     <h4 class="modal-title">Edit Product Entry</h4>
                 </div>
-                <form action="product_edit.php" method="post">
+                <form action="product_edit.php" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
                         <input name="product_edit" value="<?php echo $product_id; ?>" style="width:0px; height:0px;" hidden>
                         <div class="form-group">
                             <label for="prod_name">Name of Product</label>
-                            <input style="margin-left:30px; width:90%;" name="prod_name" type="text" class="form-control" id="" placeholder="Biogesic" value="<?php echo $product_name; ?>">
+                            <input style="margin-left:30px; width:90%;" name="prod_name" type="text" class="form-control" placeholder="Biogesic" value="<?php echo $product_name; ?>">
                         </div>
                         <div class="form-group">
                             <label for="prod_img">Product Image</label>
-                            <input style="margin-left:30px; width:90%;" name="prod_img" type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <input style="margin-left:30px; width:90%;" name="prod_img" type="file" class="form-control-file" id="prod_img">
                         </div>
                         <div class="form-group">
                             <label for="prod_price">Product Price</label>
                             <div class="input-group" style="margin-left:30px; width:90%;">
                                 <span class="input-group-addon">PhP</span>
-                                <input type="text" name="prod_price" id="" class="form-control" value="<?php echo $product_price; ?>">
+                                <input type="text" name="prod_price" class="form-control" value="<?php echo $product_price; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="prod_brief_info">Brief Info</label>
-                            <input style="margin-left:30px; width:90%;" name="prod_brief_info" type="text" class="form-control" id="" value="<?php echo $product_briefinfo; ?>">
+                            <input style="margin-left:30px; width:90%;" name="prod_brief_info" type="text" class="form-control" value="<?php echo $product_briefinfo; ?>">
                         </div>
                         <div class="form-group">
                             <label for="prod_desc">Main Description</label>
-                            <textarea style="margin-left:30px; width:90%;" name="prod_desc" class="form-control" id="" rows="3">
+                            <textarea style="margin-left:30px; width:90%;" name="prod_desc" class="form-control" rows="3">
                                 <?php
                                     echo $product_description;
                                 ?>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="form-group">
                             <label for="prod_contains">Product Content</label>
-                            <textarea style="margin-left:30px; width:90%;" name="prod_contains" class="form-control" id="" rows="2">
+                            <textarea style="margin-left:30px; width:90%;" name="prod_contains" class="form-control" rows="2">
                                 <?php
                                     echo $productContains;
                                 ?>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="form-group">
                             <label for="prod_presc">Intake Interval</label>
-                            <textarea style="margin-left:30px; width:90%;" name="prod_presc" class="form-control" id="" rows="2">
+                            <textarea style="margin-left:30px; width:90%;" name="prod_presc" class="form-control" rows="2">
                                 <?php
                                     echo $productPrescription;
                                 ?>
