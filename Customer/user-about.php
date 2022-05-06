@@ -149,7 +149,7 @@
 					  <div class="row">
 						<div class="col" style="border-right: 1px solid grey; padding-right: 3vw;">
 								<br><br>
-							<b><p style="color: #1990ce; font-size: 27px;">Our Address</p></b>
+							<b><p style="color: #1990ce; font-size: 26px;">Our Address</p></b>
 							
 								<br>
 								
@@ -163,7 +163,7 @@
 						</div>
 						<div class="col"  style="color: grey; padding-left:5vh;">
 								<br><br>
-							<b><p style="color: #1990ce; font-size: 27px;">Opening Hours</p></b>
+							<b><p style="color: #1990ce; font-size: 26px;">Opening Hours</p></b>
 								
 								<br><br>
 							<p style="color: #999999; font-size: 17px;">Monday - Sunday: 8AM - 9PM</p>
