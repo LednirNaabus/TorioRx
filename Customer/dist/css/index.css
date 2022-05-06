@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+
+body,html{
+    margin: revert;
+    font-family: 'Poppins', sans-serif;
+    background-color: #09427d; 
+}  
+ 
+.rounded-pill{
+    border-radius: 30px;
+}
+
+ 
+.myRow{ 
+    background-color: white;
+    padding: 30px; 
+    border-radius: 30px;
+
+}
+  
+h2{
+    font-weight: bold; 
+}
+ 
+.registerBtn{ 
+    background-color: #09427D;
+    border-color: transparent;
+    width: 100%;
+}
+
+.registerBtn:hover{
+    background-color: white;
+    color: #09427D;
+} 
+
+.returnBtn{
+    background-color: #4db9e9; 
+    border-color: transparent;
+    width: 100%;
+}
+.returnBtn:hover{
+    background-color: transparent;
+    border-color: #4db9e9; 
+    color: #4db9e9; 
+} 
+
+.loginBtn{    
+    background-color: transparent;
+    border-color: #4db9e9; 
+    color: #4db9e9; 
+}
+
+.loginBtn:hover{
+    background-color: #4db9e9;
+    border-color: #4db9e9; 
+    color: white; 
+} 
+
+.loginVector{
+    width: 100%; 
+    display: flex;
+    margin: auto;
+}
