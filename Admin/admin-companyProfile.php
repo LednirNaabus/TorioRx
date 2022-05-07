@@ -39,7 +39,7 @@
         <img src="img/pharmacy.jpeg" width="1600" height="660" style="border-bottom: 2px solid #09407c">
 		
 		<center>
-			<div class="container" style="margin-top:-10.6vh; font-family: 'Cutive Mono'; font-size: 35px; ">
+			<div class="container" style="margin-top:-10.6vh; font-family: 'Poppins'; font-size: 35px; ">
 			  <div class="row">
 				<div class="col"  style="background-color:rgba(9, 64, 124, 0.94); color: white; padding-top:2vh; padding-bottom:2vh;">
 				  <a href="#aboutUs" style="color: white; text-decoration: none;">ABOUT US</a>

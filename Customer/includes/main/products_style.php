@@ -90,7 +90,6 @@
   overflow: hidden;
 }    
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../customer/img/prodheader.png");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
