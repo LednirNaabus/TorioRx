@@ -30,7 +30,7 @@
 			<div class="container" style="margin-top:-8.6vh; font-family: 'Cutive Mono'; font-size: 35px;">
 			  <div class="row justify-content-md-center">
 				<div class="col-5"  style="background-color:rgba(9, 64, 124, 0.94); color: white; padding-top:1vh; padding-bottom:1vh;">
-				  <a href="#feedbacks" style="color: white; text-decoration: none;">CUSTOMER FEEDBACKS</a>
+				  <a href="#feedbacks" style="color: white; text-decoration: none; font-family:Poppins">CUSTOMER FEEDBACK</a>
 				</div>
 			  </div>
 			</div>

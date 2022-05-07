@@ -20,9 +20,9 @@ if ($_SESSION['loggedin']) {
     <!-- navbar -->
     <?php include('includes/main/navbar.php'); ?>
 
-    <div class="hero-image">
+    <div class="hero-image" style="background-image: url('../img/prodheader.png');">
         <div class="hero-text">
-            <h1 style="font-size:50px">TorioRx Pharmacy - Products</h1>
+            <h1 style="font-size:50px; color:#3C53AC">TorioRx Pharmacy - Products</h1>
             <br>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="search">
         </div>
