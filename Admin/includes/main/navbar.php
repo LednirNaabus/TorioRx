@@ -14,6 +14,6 @@
         <li class="nav-links-li"><a href="admin-companyProfile.php" style="font-weight: 100">Company Profile</a></li>
         <li class="nav-links-li"><a href="products.php" style="font-weight: 100">Products</a></li>
         <li class="nav-links-li"><a href="admin-customers.php" style="font-weight: 100">Customers</a></li>
-        <li class="nav-links-li"><a href="registerlogin.php" style="font-weight: 100">Logout</a></li>
+        <li class="nav-links-li"><a href="logout.php" style="font-weight: 100">Logout</a></li>
     </ul>
 </nav>

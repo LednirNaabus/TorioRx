@@ -96,13 +96,13 @@ nav .menu-btn i{
     }
 
     nav ul{
-        position: fixed;
+        position: absolute;
         top: 129px;
         left: -100%;
         background: #05294D;
         height: 100vh;
         width: 100%;
-        display: block;
+        display: block !important;
         text-align: center;
         transition: all 0.3s ease;
         z-index: 2;

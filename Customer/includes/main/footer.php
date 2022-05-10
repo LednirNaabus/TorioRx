@@ -51,7 +51,7 @@
 			<a class="footerlinks" href="user-about.php"> About Us </a> <br>
 			<a class="footerlinks" href="products.php"> Products </a> <br>
 			<a class="footerlinks" href="user-contact.php"> Contact Us </a><br>
-			<a class="footerlinks" href="registerlogin.php"> Logout </a> <br>
+			<a class="footerlinks" href="logout.php"> Logout </a> <br>
 
 		</div>
 		<div class="col-md-3" style="margin-top: 4%; font-weight: 200;">
