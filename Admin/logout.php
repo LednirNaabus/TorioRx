@@ -2,5 +2,5 @@
     session_start();
     $_SESSION = array();
     session_destroy();
-    header("Location: registerlogin.php");
+    header("Location: ../index.html");
 ?>

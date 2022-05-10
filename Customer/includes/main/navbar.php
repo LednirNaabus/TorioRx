@@ -3,7 +3,7 @@
     <div class="contact-nav-right"> <i class="fas fa-phone" style= "color: #09427D; font-size: 13px;"></i> Tel: 0915 512 5563  </div>
 </div>
 <nav>
-    <div class="logo">TorioRx</div>
+    <div class="logo"><img class="logo-footer" src="img/PharmacyLogoWithBorderRadius.png" width="165" height="60"></div>
     <input type="checkbox" id="screen-checker">
     <label for="screen-checker" class="menu-btn">
         <i class="fas fa-bars"></i>
